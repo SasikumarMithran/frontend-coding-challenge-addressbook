@@ -1,0 +1,46 @@
+<div class="nav">
+  Employee Address Book
+</div>
+
+<div class="search">
+  <input class="form-control search-input" type="text" name="firstName" [(ngModel)]="searchValue" placeholder=" Search by First Name, Last Name and Department">
+</div>
+<div class=card>
+  <div class="card-header">
+    <div class="btn-container">
+      <button class="add" (click)="addEmployee()">+Add</button>
+    </div>
+  </div>
+  <div class="card-body">
+    <table>
+      <thead class="table-head">
+        <tr>
+          <th>First Name</th>
+          <th (click)="sort('id')">Last Name<img class="sort-img" src="/assets/sort.png"></th>
+          <th>Department</th>
+          <th>Phone Number</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let employee of EmployeeList | searchFilter:searchValue ; let i = index">
+          <td>
+            <input type="text" [(ngModel)]="employee.firstName">
+          </td>
+          <td>
+            <input type="text" [(ngModel)]="employee.lastName">
+          </td>
+          <td>
+            <input type="text" [(ngModel)]="employee.department">
+          </td>
+          <td>
+            <input type="tel" maxlength="10"  [(ngModel)]="employee.phoneNumber">
+          </td>
+          <td>
+            <button class="delete" (click)="deleteEmployee(i)">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
