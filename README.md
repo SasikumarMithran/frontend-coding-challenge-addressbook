@@ -1,14 +1,18 @@
-# Industry
+# Address Book
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.2.
 
+## Objective - Coding Challenge
+As a Branch Manager, I want to be able to add a new employee (first name, last name, department and a single phone number). I want to be able to search for staff members by their department. I want to be able to search for staff members by name. I want to be able to delete an employee. I want the ability to sort all staff alphabetically by surname.
+
+## Get Started
+To download package and it's dependencies
+```bash
+  npm install
+```
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
 ## Build
 
@@ -17,10 +21,6 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 ## Running unit tests
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
 ## Further help
 
